@@ -2,7 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;		
 import org.openqa.selenium.chrome.ChromeDriver;	
 
-public class Link {
+public class FindByPartialLink {
 
 	public static void main(String[] args) {
         String baseUrl = "http://demo.guru99.com/test/block.html";					

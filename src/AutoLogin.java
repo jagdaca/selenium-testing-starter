@@ -3,7 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;		
 import org.openqa.selenium.*;
 
-public class Login {
+public class AutoLogin {
 
 	public static void main(String[] args) {
     	// declaration and instantiation of objects/variables		
@@ -37,12 +37,28 @@ public class Login {
         login.click();			
         System.out.println("Login Done with Click");					
         		
-        //using submit method to submit the form. Submit used on password field		
-        driver.get(baseUrl);					
-        driver.findElement(By.id("email")).sendKeys("abcd@gmail.com");							
-        driver.findElement(By.name("passwd")).sendKeys("abcdefghlkjl");							
-        driver.findElement(By.id("SubmitLogin")).submit();					
-        System.out.println("Login Done with Submit");	
+        try {
+        	//delay execution of script continuation
+			Thread.sleep(5000);
+			
+	        //using submit method to submit the form. Submit used on password field		
+	        driver.get(baseUrl);					
+	        driver.findElement(By.id("email")).sendKeys("abcd@gmail.com");							
+	        driver.findElement(By.name("passwd")).sendKeys("abcdefghlkjl");							
+	        driver.findElement(By.id("SubmitLogin")).submit();					
+	        System.out.println("Login Done with Submit");
+	        
+        	//delay execution of script continuation
+			Thread.sleep(5000);
+			
+			driver.close();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+        
+
+        
+        
 
 	}
 

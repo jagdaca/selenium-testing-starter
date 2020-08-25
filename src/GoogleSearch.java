@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver; 
 
-public class Google {
+public class GoogleSearch {
 
 	public static void main(String[] args) {
         
@@ -13,11 +13,11 @@ public class Google {
     System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");  
     WebDriver driver=new ChromeDriver();  
       
-// Launch website  
+    // Launch website  
     driver.navigate().to("http://www.google.com/");  
           
     // Click on the search text box and send value  
-    driver.findElement(By.name("q")).sendKeys("javatpoint tutorials");  
+    driver.findElement(By.name("q")).sendKeys("hello tutorials");  
           
     // Click on the search button  
     List<WebElement> listOfElements = driver.findElements(By.name("btnK"));
